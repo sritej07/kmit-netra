@@ -1,0 +1,498 @@
+:root {
+  --page-bg: #f4f5fb;
+  --card-bg: #ffffff;
+  --brand-bg: linear-gradient(180deg, #eef2ff 0%, #f7f8ff 100%);
+  --text-primary: #2b2b35;
+  --text-muted: #8d8ea4;
+  --accent: #8f33e6;
+  --accent-strong: #7c22de;
+  --accent-shadow: rgba(143, 51, 230, 0.28);
+  --input-border: #e4e2ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(143, 51, 230, 0.08), transparent 28%),
+    linear-gradient(180deg, #fbfbfe 0%, var(--page-bg) 100%);
+  color: var(--text-primary);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app-frame {
+  width: min(100%, 390px);
+}
+
+.login-card,
+.attendance-screen {
+  background: var(--card-bg);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(38, 39, 71, 0.12);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.brand-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  padding: 36px 24px;
+  background: var(--brand-bg);
+}
+
+.brand-logo {
+  width: min(100%, 270px);
+  height: auto;
+  display: block;
+}
+
+.form-panel {
+  padding: 28px 24px 32px;
+}
+
+.login-tabs {
+  margin-bottom: 24px;
+}
+
+.tab-button {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--accent) 0%, #a842ea 100%);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 16px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 12px 25px var(--accent-shadow);
+}
+
+.tab-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.login-message {
+  min-height: 22px;
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #d64665;
+}
+
+.login-message.is-success {
+  color: #299b52;
+}
+
+.field-label {
+  font-size: 0.98rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.required-mark {
+  color: #e04a80;
+}
+
+.text-input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 0 18px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-input::placeholder {
+  color: var(--text-muted);
+}
+
+.text-input:focus {
+  border-color: rgba(143, 51, 230, 0.6);
+  box-shadow: 0 0 0 4px rgba(143, 51, 230, 0.12);
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .text-input {
+  padding-right: 54px;
+}
+
+.ghost-icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #8a8ca3;
+  cursor: pointer;
+}
+
+.ghost-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sign-in-button {
+  margin-top: 12px;
+  height: 58px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--accent) 0%, #9b39e8 100%);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 14px 26px rgba(143, 51, 230, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sign-in-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 30px rgba(143, 51, 230, 0.32);
+}
+
+.sign-in-button:active {
+  transform: translateY(0);
+}
+
+.attendance-screen {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+}
+
+.attendance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #ececf2;
+  background: #ffffff;
+}
+
+.header-logo {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+.menu-button {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  gap: 4px;
+  align-content: center;
+  justify-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-button span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #74778b;
+}
+
+.attendance-body {
+  padding: 28px 16px 32px;
+}
+
+.attendance-title {
+  margin: 0 0 26px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #14151e;
+}
+
+.attendance-panel {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(28, 31, 58, 0.08);
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.panel-heading {
+  width: 100%;
+  min-height: 72px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  border: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1d1f2d;
+  background: #f4f5f9;
+  text-align: left;
+  cursor: pointer;
+}
+
+.panel-heading[aria-expanded="false"] .panel-arrow svg {
+  transform: rotate(-90deg);
+}
+
+.panel-arrow svg {
+  transition: transform 0.2s ease;
+}
+
+.panel-content {
+  display: block;
+}
+
+.panel-content.is-collapsed {
+  display: none;
+}
+
+.panel-arrow {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2d2f3f;
+}
+
+.panel-arrow svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.today-strip {
+  padding: 28px 18px 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.status-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.status-dot::before,
+.status-dot::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.status-dot.is-green,
+.status-dot.is-red,
+.status-dot.is-empty {
+  background: #ffffff;
+}
+
+.status-dot.is-green {
+  border: 3px solid #35b44b;
+}
+
+.status-dot.is-green::before {
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid #35b44b;
+  border-bottom: 2px solid #35b44b;
+  transform: translate(-50%, -62%) rotate(-45deg);
+}
+
+.status-dot.is-red {
+  border: 3px solid #ed3f4d;
+}
+
+.status-dot.is-red::before {
+  width: 10px;
+  height: 2px;
+  background: #ed3f4d;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.status-dot.is-red::after {
+  width: 10px;
+  height: 2px;
+  background: #ed3f4d;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.status-dot.is-empty {
+  border: 3px solid #7f839a;
+}
+
+.attendance-table {
+  padding: 14px 18px 8px;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 106px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.table-head {
+  padding: 10px 12px 14px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #2e3040;
+}
+
+.table-row {
+  padding: 18px 12px;
+  border-top: 1px solid #ececf3;
+}
+
+.date-cell {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #5a5d71;
+}
+
+.sessions-cell {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .page-shell {
+    padding: 0;
+  }
+
+  .app-frame,
+  .login-card,
+  .attendance-screen {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .brand-panel {
+    min-height: 230px;
+    padding: 28px 20px;
+  }
+
+  .form-panel {
+    padding: 24px 20px 28px;
+  }
+
+  .tab-button,
+  .sign-in-button,
+  .text-input {
+    height: 54px;
+  }
+
+  .attendance-body {
+    padding: 24px 12px 28px;
+  }
+
+  .attendance-title {
+    font-size: 1.7rem;
+  }
+
+  .panel-heading {
+    min-height: 64px;
+    font-size: 1.15rem;
+  }
+
+  .attendance-table {
+    padding: 12px 12px 8px;
+  }
+
+  .table-head,
+  .table-row {
+    grid-template-columns: 98px 1fr;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .today-strip {
+    padding: 22px 14px 28px;
+    gap: 6px;
+  }
+
+  .status-dot {
+    width: 18px;
+    height: 18px;
+  }
+}

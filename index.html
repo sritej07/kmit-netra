@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netra Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="app-frame">
+        <section class="login-card" aria-label="Netra login" id="login-screen">
+          <div class="brand-panel">
+            <img class="brand-logo" src="./images/kmit_netra.png" alt="KMIT Netra" />
+          </div>
+
+          <div class="form-panel">
+            <div class="login-tabs" aria-label="Login mode">
+              <button class="tab-button is-active" type="button">
+                <span class="tab-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M14 8a4 4 0 1 0-7.9 1H3v3h3v2h2v-2h2.1A4 4 0 0 0 14 8Zm-4 0a1 1 0 1 1 2 0a1 1 0 0 1-2 0Z"
+                    />
+                  </svg>
+                </span>
+                <span>Password Login</span>
+              </button>
+            </div>
+
+            <form class="login-form" id="login-form">
+              <label class="field-label" for="mobile-number">
+                <span class="required-mark">*</span>
+                <span>Mobile Number</span>
+              </label>
+              <input
+                id="mobile-number"
+                class="text-input"
+                type="tel"
+                inputmode="numeric"
+                placeholder="Enter your Mobile Number"
+              />
+
+              <label class="field-label" for="password">
+                <span class="required-mark">*</span>
+                <span>Password</span>
+              </label>
+              <div class="password-field">
+                <input
+                  id="password"
+                  class="text-input"
+                  type="password"
+                  placeholder="Password"
+                />
+                <button class="ghost-icon" type="button" aria-label="Toggle password visibility">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M3 3l18 18M10.6 10.7a2 2 0 0 0 2.7 2.7M9.9 5.1A10.9 10.9 0 0 1 12 4.9c5.5 0 9.4 5.3 9.5 5.5a1 1 0 0 1 0 1.1 18.3 18.3 0 0 1-4.2 4.4M6.7 6.8A18.7 18.7 0 0 0 2.5 10.4a1 1 0 0 0 0 1.1S6.5 16.8 12 16.8c1 0 1.9-.1 2.8-.4"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <p class="login-message" id="login-message" aria-live="polite"></p>
+
+              <button class="sign-in-button" type="submit">Sign In</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="attendance-screen is-hidden" id="attendance-screen" aria-label="Attendance">
+          <header class="attendance-header">
+            <img class="header-logo" src="./images/kmit_netra.png" alt="KMIT Netra" />
+            <button class="menu-button" type="button" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </header>
+
+          <div class="attendance-body">
+            <h1 class="attendance-title">Attendance</h1>
+
+            <section class="attendance-panel">
+              <button
+                class="panel-heading"
+                type="button"
+                data-toggle-panel
+                aria-expanded="true"
+                aria-controls="today-panel"
+              >
+                <span class="panel-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 9l6 6l6-6" />
+                  </svg>
+                </span>
+                <span>Today</span>
+              </button>
+              <div class="panel-content" id="today-panel">
+                <div class="today-strip">
+                  <span class="status-dot is-green"></span>
+                  <span class="status-dot is-green"></span>
+                  <span class="status-dot is-green"></span>
+                  <span class="status-dot is-green"></span>
+                  <span class="status-dot is-green"></span>
+                  <span class="status-dot is-green"></span>
+                  <span class="status-dot is-green"></span>
+                </div>
+              </div>
+            </section>
+
+            <section class="attendance-panel">
+              <button
+                class="panel-heading"
+                type="button"
+                data-toggle-panel
+                aria-expanded="true"
+                aria-controls="last-two-weeks-panel"
+              >
+                <span class="panel-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 9l6 6l6-6" />
+                  </svg>
+                </span>
+                <span>Last 2 Weeks</span>
+              </button>
+
+              <div class="panel-content" id="last-two-weeks-panel">
+                <div class="attendance-table">
+                  <div class="table-head">
+                    <span>Date</span>
+                    <span>Sessions</span>
+                  </div>
+
+                  <div class="table-row">
+                    <span class="date-cell">06/04/2026</span>
+                    <div class="sessions-cell">
+                      <span class="status-dot is-green"></span>
+                      <span class="status-dot is-green"></span>
+                      <span class="status-dot is-green"></span>
+                      <span class="status-dot is-green"></span>
+                      <span class="status-dot is-green"></span>
+                      <span class="status-dot is-green"></span>
+                      <span class="status-dot is-green"></span>
+                    </div>
+                  </div>
+
+                  <div class="table-row">
+                    <span class="date-cell">04/04/2026</span>
+                    <div class="sessions-cell">
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                    </div>
+                  </div>
+
+                  <div class="table-row">
+                    <span class="date-cell">02/04/2026</span>
+                    <div class="sessions-cell">
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                    </div>
+                  </div>
+
+                  <div class="table-row">
+                    <span class="date-cell">01/04/2026</span>
+                    <div class="sessions-cell">
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                    </div>
+                  </div>
+
+                  <div class="table-row">
+                    <span class="date-cell">31/03/2026</span>
+                    <div class="sessions-cell">
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                      <span class="status-dot is-red"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
